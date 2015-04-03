@@ -6,7 +6,7 @@ module.exports = {
     cache: true,
     entry: {
         home: "./src/entry/home/home.js",
-        feature: "./src/entry/feature/feature.js"
+        catalog: "./src/entry/catalog/catalog.js"
     },
     output: {
         path: path.join(__dirname, "dist/"),
@@ -52,11 +52,12 @@ module.exports = {
         ],
         alias: {
             "bootstrap": "bootstrap/bootstrap.3.3.2.min.js",
-            "underscore": "underscore.1.7.0.min.js"
+            "underscore": "underscore.1.7.0.min.js",
+            "jquery": "jquery-1.11.2.min.js"
         }
     },  
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin("core", "js/core.js", ["home", "feature"]),
+        new webpack.optimize.CommonsChunkPlugin("core", "js/core.js", ["home", "catalog"]),
         new ExtractTextPlugin("css/[name].css"),
         new webpack.ProvidePlugin({
             jQuery: "jquery",

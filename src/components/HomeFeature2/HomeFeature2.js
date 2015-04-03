@@ -1,5 +1,3 @@
-import { debug } from '../../utility/logging';
-
 require("./HomeFeature2.scss");
 
 /*****************************************************************************
@@ -8,15 +6,18 @@ require("./HomeFeature2.scss");
 class HomeFeature2 {
 
 	constructor() {
-		this.render;
+		this.render();
 	}
 
 	render() {
-		var debug = document.createElement('div');
-		debug.innerHTML = 'appended by Home Feature 2';
-		debug.className = 'HomeFeature2-copy';
-		document.getElementsByClassName('HomeFeature2')[0].appendChild(debug)
-	}
+		var element = document.createElement('div');
+		var child = document.createElement('p');
+		element.className = 'HomeFeature2'
+		child.className = 'HomeFeature2-copy';
+		child.innerHTML = 'Home Feature 2';
+		element.appendChild(child);
+		document.getElementById('content').appendChild(element);
+	}	
 }
 
 export default HomeFeature2;

@@ -13,7 +13,7 @@ class UniqueFeature {
 	}
 
 	render() {
-		debug('Unique Special Feature');
+		debug('Special Feature appears only on this page: uses Bootstrap and Underscore');
 		this.testBootstrapImport();
 	}
 

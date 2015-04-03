@@ -2,18 +2,18 @@ import { log } from '../../utility/logging';
 import SharedComponent from '../../components/SharedComponent/SharedComponent';
 import UniqueFeature from '../../components/UniqueFeature/UniqueFeature';
 
-require("./feature.scss");
+require("./catalog.scss");
 
 /*****************************************************************************
- * special feature page 
+ * catalog type entry page 
  *****************************************************************************/
-class SpecialFeature {
+class CatalogEntryPage {
 
 	constructor() {
 
 		$(document).ready(this.onDOMReady);
 
-		log("SpecialFeature page constructor");
+		log("CatalogEntryPage page constructor");
 	}
 
 	onDOMReady() {
@@ -25,4 +25,4 @@ class SpecialFeature {
 	}
 }
 
-new SpecialFeature();
+new CatalogEntryPage();

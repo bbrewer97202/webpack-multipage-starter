@@ -30,9 +30,7 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: 8000,
-					base: 'dist',
-					hostname: '*',
-					keepalive: true
+					base: 'dist'
 				}
 			}
 		},
@@ -58,8 +56,12 @@ module.exports = function(grunt) {
 		watch: {
 			scripts: {
 				files: ['./src/**/*.js','./src/**/*.scss'],
-				tasks: ['webpack:dev'],
+				tasks: ['webpack:dev']
 			},
+			html: {
+				files: ['./src/**/*.html'],
+				tasks: ['copy:dist']
+			}
 		}
 	});
 	
@@ -70,7 +72,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-webpack');
 
 	//tasks
-	grunt.registerTask('default', ['concat', 'copy', 'webpack:dev', 'watch']);
+	grunt.registerTask('default', ['concat', 'copy', 'webpack:dev', 'connect', 'watch']);
 	grunt.registerTask('production', ['webpack:dist']);
 
 };

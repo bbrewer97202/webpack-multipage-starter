@@ -22,7 +22,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-webpack": "^1.0.8",
     "imports-loader": "^0.6.3",
-    "jquery": "^1.11.2",
     "node-sass": "^2.1.1",
     "sass-loader": "^0.4.2",
     "script-loader": "^0.6.1",
