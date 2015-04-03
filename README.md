@@ -1,5 +1,5 @@
 # webpack multipage starter
-Bundle shared "core" Javascript and CSS for all pages. Bundle Javascript and CSS unique to a single page type separately, only for pages of that type.
+Bundle shared "core" Javascript and CSS for all pages, bundle Javascript and CSS unique to single page types separately.
 
 ### Goals
 * Component driven architecture
